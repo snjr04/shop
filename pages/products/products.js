@@ -1,10 +1,28 @@
 let productsRow = document.querySelector('.mens__row')
 let productsPagination = document.querySelector('.mens__pagination')
 let productsSearch = document.querySelector('.mens__search')
+let productsFrom = document.querySelector('.mens__from')
+let productsSelect = document.querySelector('.mens__select')
 let page = 1
 
-const getAllProducts = (title = '') =>{
-    fetch(`http://localhost:3000/products?_page=${page}&_limit=5&title_like=${title}`)
+
+const getActiveLink = () =>{
+    let asideItem = document.querySelectorAll('.aside__item')
+    let title =document.querySelector('.mens__title')
+    Array.from(asideItem).forEach((item) =>{
+        if (location.search ===item.getAttribute('href')){
+            item.classList.add('active')
+            title.textContent=item.textContent
+        }
+    })
+}
+getActiveLink()
+
+
+const getAllProducts = (title = '',from = 0,view = '') =>{
+    let category =location.search.includes('all')?'':`category_like=${location.search.split('=')[1]}`
+    let select = view.length?`&_sort=price&_order=${view}`: ''
+    fetch(`http://localhost:3000/products?${category}&_page=${page}&_limit=5&title_like=${title}&price_gte=${from}${select}`)
         .then((response) =>response.json())
         .then((response) =>{
             productsRow.innerHTML = ''
@@ -38,9 +56,10 @@ const getAllProducts = (title = '') =>{
 getAllProducts()
 
 
-const getAllProductsCount = (title= '') =>{
-    fetch(`http://localhost:3000/products?title_like=${title
-    }`)
+const getAllProductsCount = (title= '',from = 0,view = '') =>{
+    let category =location.search.includes('all')?'':`category_like=${location.search.split('=')[1]}`
+    let select = view.length?`&_sort=price&_order=${view}`: ''
+    fetch(`http://localhost:3000/products?${category}&title_like=${title}&price_gte=${from}${select}`)
         .then((response) =>response.json())
         .then((response) =>{
             productsPagination.innerHTML = ''
@@ -64,7 +83,7 @@ const getAllProductsCount = (title= '') =>{
                             el.style.background ="#212123"
                         }
                     })
-                    getAllProducts()
+                    getAllProducts(productsSearch.value,productsFrom.value,productsSelect.value)
                 })
             })
 
@@ -74,6 +93,17 @@ getAllProductsCount()
 
 
 productsSearch.addEventListener('input',() =>{
-    getAllProducts(productsSearch.value)
-    getAllProductsCount(productsSearch.value)
+    getAllProducts(productsSearch.value,productsFrom.value,productsSelect.value)
+    getAllProductsCount(productsSearch.value,productsFrom.value,productsSelect.value)
+})
+
+productsFrom.addEventListener('input',()=>{
+    getAllProducts(productsSearch.value,productsFrom.value,productsSelect.value)
+    getAllProductsCount(productsSearch.value,productsFrom.value,productsSelect.value)
+})
+
+
+productsSelect.addEventListener('change',()=>{
+    getAllProducts(productsSearch.value,productsFrom.value,productsSelect.value)
+    getAllProductsCount(productsSearch.value,productsFrom.value,productsSelect.value)
 })
