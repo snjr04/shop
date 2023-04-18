@@ -37,6 +37,9 @@ body {
     font-size: 16px;
     color: #FFFFFF;
     cursor: pointer;
+    &_disabled {
+        background: #576067;
+    }
 }
 
 @import "header";
@@ -47,3 +50,6 @@ body {
 @import "less";
 @import "footer";
 @import "mens";
+@import "product";
+@import "favorites";
+@import "cart";

@@ -1,0 +1,14 @@
+.favorites {
+  width: 77%;
+  background: #191919;
+  border-radius: 6px;
+  padding: 20px;
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  &__card {
+    width: calc(33.33333% - 20px);
+  }
+}

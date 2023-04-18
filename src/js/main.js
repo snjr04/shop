@@ -14,7 +14,9 @@ const getAllTrends = (limit = 5) => {
             response.forEach((item) => {
                 trandRow.innerHTML += `
                 <div class="trending__card">
+                <a href="pages/product/index.html?product=${item.id}">
                         <img src="${item.image}" alt="" class="trending__card-img">
+                        </a>
                         <div class="trending__card-info">
                             <h3 class="trending__card-title">
                                 ${item.title}
@@ -60,7 +62,9 @@ const getHundretPrice = (limit = 5) => {
             response.forEach((item) => {
                 lessRow.innerHTML += `
                 <div class="less__card">
+                <a href="pages/product/index.html?product=${item.id}">
                         <img src="${item.image}" alt="" class="less__card-img">
+                        </a>
                         <div class="less__card-info">
                             <h3 class="less__card-title">
                                 ${item.title}
