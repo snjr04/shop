@@ -1,3 +1,5 @@
+import {changeUser, user} from "../../../user"
+
 let title = document.querySelector('.product__info-title')
 let price = document.querySelector('.product__info-price')
 let category = document.querySelector('.product__info-category-text')
@@ -57,6 +59,31 @@ const getOneProduct = () =>{
             addCard.dataset.id = response.id
             addFavorites.dataset.id = response.id
             getAllRelatedProducts(response.category,response.id)
+
+            if (user.favorites.some((item) =>item.id === response.id)){
+                addFavorites.textContent = 'Удалить из избранных'
+            }else{
+                addFavorites.textContent = 'Добавить в избранное'
+            }
+
+            addFavorites.addEventListener('click',() =>{
+                fetch(`http://localhost:3000/users/${user.id}`,{
+                    method: 'PATCH',
+                    headers:{
+                        "Content-Type":"application/json"
+                    },
+                    body:JSON.stringify({
+                        favorites:user.favorites.some((item) => item.id === response.id)?
+                            user.favorites.filter((item) => item.id !==response.id):
+                        [...user.favorites,response]
+                    })
+                }).then((response) =>response.json())
+                    .then((response)=>{
+                    changeUser(response)
+                    localStorage.setItem('user',JSON.stringify(response))
+                        getOneProduct()
+                })
+            })
         })
 }
 

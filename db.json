@@ -1,36 +1,12 @@
 {
   "users": [
     {
-      "email": "fsaf@mail.ru",
-      "password": "$2a$10$6vNxbrglHHAFI7XM57vG7u63IEbBAqBlypZZbT5nKmy1oRJVoO842",
-      "name": "aehnrsgtj",
-      "surname": "hrshfsh",
-      "phone": "dsgjhsdjh",
-      "id": 1
-    },
-    {
-      "email": "fvrsdhq@mail.ru",
-      "password": "$2a$10$PshLi3vdeyCtpxyk7qIk8ucT0X5saJmanyfBqzgZXOAFJ.SJyL1VC",
-      "name": "dfhtryh",
-      "surname": "rjnjsafhaas",
-      "phone": "sfjdfd",
-      "id": 2
-    },
-    {
-      "email": "esarhg@mail.ru",
-      "password": "$2a$10$5hldRFMpJdxLw/bpoYxasO/Yr9HRAbyeCpzuIRFoT/LU6mrt3e2lK",
-      "name": "sagfsdg",
-      "surname": "ahbte",
-      "phone": "4545466368",
-      "id": 3
-    },
-    {
       "email": "sanjar@mail.ru",
       "password": "$2a$10$sLwTsPlJDPV0TqvCKbVbheJPCD2ST6ovxbv9xnPzCgvoVoEewNb6W",
       "name": "Sanjar",
       "surname": "Omurbekov",
       "phone": "5468768",
-      "id": 4
+      "id": 1
     }
   ],
   "products": [

@@ -1,5 +1,12 @@
 import{changeUser}from"../../../user.js"
 
+
+if (localStorage.getItem('user')!==null){
+    location.href= 'http://localhost:63342/stuf/index.html'
+}
+
+
+
 let authorF = document.querySelector('.authorization__first')
 let authorS = document.querySelector('.authorization__second')
 
@@ -85,6 +92,9 @@ registerForm.addEventListener('submit',(event) =>{
         phone:event.target[3].value,
         email:event.target[4].value,
         password:event.target[5].value,
+        favorites:[],
+        cart:[],
+        orders:[]
     }
     registerUser(newUser)
 
