@@ -84,3 +84,20 @@
   display: block;
   margin: 24px auto 0;
 }
+.mens__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.mens__pagination-1 {
+  background: #6C3EB8;
+}
+.mens__pagination-2 {
+  background: #6C3EB8;
+}

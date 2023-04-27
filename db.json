@@ -1,12 +1,137 @@
 {
   "users": [
     {
-      "email": "sanjar@mail.ru",
-      "password": "$2a$10$sLwTsPlJDPV0TqvCKbVbheJPCD2ST6ovxbv9xnPzCgvoVoEewNb6W",
-      "name": "Sanjar",
-      "surname": "Omurbekov",
-      "phone": "5468768",
+      "email": "max@mail.ru",
+      "password": "$2a$10$lXUkiYD/ARn3l.HBaWo6qOrxPhp6Qc8eTQdRj2YYEmLzFJzXeGwHy",
+      "name": "Maksat",
+      "surname": "Birimkulov",
+      "phone": "123123123123",
+      "favorites": [],
+      "cart": [],
+      "orders": [],
       "id": 1
+    },
+    {
+      "email": "ivan@mail.ru",
+      "password": "$2a$10$NOFV8RorOi.maRUC3bC4aOsbW8fcu2Fz7e7llew9avcf4g/02xUJ2",
+      "name": "Ivan",
+      "surname": "Ivanov",
+      "phone": "123123123",
+      "favorites": [
+        {
+          "id": 11,
+          "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+          "price": 109,
+          "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+          "category": "electronics",
+          "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+          "rating": {
+            "rate": 4.8,
+            "count": 319
+          }
+        },
+        {
+          "id": 12,
+          "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
+          "price": 114,
+          "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
+          "category": "electronics",
+          "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
+          "rating": {
+            "rate": 4.8,
+            "count": 400
+          }
+        }
+      ],
+      "cart": [],
+      "orders": [],
+      "id": 2
+    },
+    {
+      "email": "max123@mail.ru",
+      "password": "$2a$10$adq9.hSWJcYma0cr/.24rO1ftzjTZ.I8o.7SGw2QY0abEcmpxKanm",
+      "name": "max123",
+      "surname": "Birimkulov",
+      "phone": "123123123",
+      "favorites": [],
+      "cart": [],
+      "orders": [],
+      "id": 3
+    },
+    {
+      "email": "maksat@mail.ru",
+      "password": "$2a$10$zkg0G3io.44FPN5B5E2Z0.sw3JueQJyOO5t2SqFJ3E6tEsN4r/xje",
+      "name": "Maksat",
+      "surname": "Birimkulov",
+      "phone": "55123123123",
+      "favorites": [
+        {
+          "id": 12,
+          "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
+          "price": 114,
+          "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
+          "category": "electronics",
+          "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
+          "rating": {
+            "rate": 4.8,
+            "count": 400
+          }
+        },
+        {
+          "id": 13,
+          "title": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
+          "price": 599,
+          "description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz",
+          "category": "electronics",
+          "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
+          "rating": {
+            "rate": 2.9,
+            "count": 250
+          }
+        },
+        {
+          "id": 11,
+          "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+          "price": 109,
+          "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+          "category": "electronics",
+          "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+          "rating": {
+            "rate": 4.8,
+            "count": 319
+          }
+        }
+      ],
+      "cart": [
+        {
+          "id": 11,
+          "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+          "price": 109,
+          "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+          "category": "electronics",
+          "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+          "rating": {
+            "rate": 4.8,
+            "count": 319
+          },
+          "count": 7
+        },
+        {
+          "id": 13,
+          "title": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
+          "price": 599,
+          "description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz",
+          "category": "electronics",
+          "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
+          "rating": {
+            "rate": 2.9,
+            "count": 250
+          },
+          "count": 6
+        }
+      ],
+      "orders": [],
+      "id": 4
     }
   ],
   "products": [

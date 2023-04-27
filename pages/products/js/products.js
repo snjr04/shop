@@ -32,8 +32,9 @@ const getAllProducts = (title = '', from = 0, view = '') => {
             response.forEach((item) => {
                 productsRow.innerHTML += `<div class="trending__card">
                         <a href="../product/index.html?product=${item.id}">
-                        <img src="${item.image}" alt="" class="trending__card-img">
+                         <img src="${item.image}" alt="" class="trending__card-img">
                         </a>
+                       
                         <div class="trending__card-info">
                             <h3 class="trending__card-title">
                                 ${item.title}

@@ -1,11 +1,10 @@
-import{changeUser}from"../../../user.js"
+import {changeUser} from "../../../user.js";
 
 
-if (localStorage.getItem('user')!==null){
-    location.href= 'http://localhost:63342/stuf/index.html'
+
+if (localStorage.getItem('user') !== null) {
+    location.href = 'http://localhost:63342/stuff-js/index.html'
 }
-
-
 
 let authorF = document.querySelector('.authorization__first')
 let authorS = document.querySelector('.authorization__second')
@@ -49,62 +48,65 @@ signUpBtn.addEventListener('click', () => {
     signInBtn.style.cursor = 'pointer'
 })
 
-
 let registerForm = document.querySelector('.signUp')
-let logInForm = document.querySelector('.signIn')
-
-const registerUser = (newUser) =>{
-    fetch('http://localhost:3000/signup',{
-        method:"POST",
-        headers:{
-            "Content-Type":"application/json",
-        },
-        body:JSON.stringify(newUser)
-    }).then((response) =>response.json())
-        .then((response) =>{
-            changeUser(response.user)
-            localStorage.setItem('user',JSON.stringify(response.user))
-            location.href = 'http://localhost:63342/stuf/index.html'
-        })
-}
+let loginForm = document.querySelector('.signIn')
 
 
-const logInUser =(newUser) =>{
-    fetch('http://localhost:3000/login',{
-        method:"POST",
-        headers:{
-            "Content-Type":"application/json",
+const registerUser = (newUser) => {
+    fetch('http://localhost:3000/register', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
         },
         body: JSON.stringify(newUser)
-    }).then((response) =>response.json())
-        .then((response) =>{
+    }).then((response) => response.json())
+        .then((response) => {
             changeUser(response.user)
-            localStorage.setItem('user',JSON.stringify(response.user))
-            location.href = 'http://localhost:63342/stuf/index.html'
+            localStorage.setItem('user', JSON.stringify(response.user))
+            location.href = 'http://localhost:63342/stuff-js/index.html'
         })
 }
 
-registerForm.addEventListener('submit',(event) =>{
+const loginUser = (newUser) => {
+    fetch('http://localhost:3000/login', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newUser)
+    }).then((response) => response.json())
+        .then((response) => {
+            changeUser(response.user)
+            localStorage.setItem('user', JSON.stringify(response.user))
+            location.href = 'http://localhost:63342/stuff-js/index.html'
+        })
+}
+
+
+registerForm.addEventListener('submit', (event) => {
     event.preventDefault()
-    let newUser ={
-        name:event.target[1].value,
-        surname:event.target[2].value,
-        phone:event.target[3].value,
-        email:event.target[4].value,
-        password:event.target[5].value,
-        favorites:[],
-        cart:[],
-        orders:[]
+    let newUser = {
+        name: event.target[1].value,
+        surname: event.target[2].value,
+        phone: event.target[3].value,
+        email: event.target[4].value,
+        password: event.target[5].value,
+        favorites: [],
+        cart : [],
+        orders: []
     }
+
     registerUser(newUser)
 
 })
 
-logInForm.addEventListener('submit',(event) =>{
+loginForm.addEventListener('submit', (event) => {
     event.preventDefault()
-    let newUser ={
-        email:event.target[1].value,
-        password:event.target[2].value,
+    let newUser = {
+        email: event.target[1].value,
+        password: event.target[2].value,
     }
-    logInUser(newUser)
+
+    loginUser(newUser)
+
 })

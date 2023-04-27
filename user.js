@@ -1,33 +1,31 @@
-export let user ={
-    email:''
+
+export let user = {
+    email : ''
 }
-
-
 
 let headerUserName = document.querySelector('.header__user-name')
 let headerUserAction = document.querySelector('.header__user-action')
 
-
-if (localStorage.getItem('user')!==null){
+if (localStorage.getItem('user') !== null) {
     user = JSON.parse(localStorage.getItem('user'))
-    headerUserName.textContent=`${user.name} ${user.surname}`
-    headerUserAction.textContent='Выйти'
-}else {
-    headerUserAction.textContent='Войти'
+    headerUserName.textContent = `${user.name} ${user.surname}`
+    headerUserAction.textContent = 'Выйти'
+} else {
+    headerUserAction.textContent = 'Войти'
 }
-headerUserAction.addEventListener('click',()=>{
-    if (headerUserAction.textContent==='Войти'){
-        location.href = 'http://localhost:63342/stuf/pages/authorization/index.html'
-    }else {
+
+
+headerUserAction.addEventListener('click' , () => {
+    if (headerUserAction.textContent === 'Войти') {
+        location.href = 'http://localhost:63342/stuff-js/pages/authorization/index.html'
+    } else {
         localStorage.removeItem('user')
-        user = {email:''}
-        location.href= 'http://localhost:63342/stuf/index.html'
+        user = {email: ''}
+        location.href = 'http://localhost:63342/stuff-js/index.html'
     }
 })
 
-
-
-export const changeUser =(newUser) =>{
-    user=newUser
-    headerUserName.textContent=`${user.name} ${user.surname}`
+export const changeUser = (newUser) => {
+    user = newUser
 }
+
